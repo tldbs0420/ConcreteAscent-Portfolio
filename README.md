@@ -5,14 +5,29 @@
 | 항목 | 내용 |
 |---|---|
 | 개발 형태 | 개인 프로젝트 |
-| 개발 기간 | 작성 예정 |
-| 개발 환경 | Unreal Engine / C++ / Blueprint |
-| 사용 기술 | Motion Matching / Pose Search / Chooser / Motion Warping / Enhanced Input |
-| 주요 구현 | Box 기반 장애물 판정 / 파쿠르 동작과 위치 보정 / 난간 이동과 등반 / 게임 진행과 UI 연결 |
+| 사용 기술 | Unreal Engine / C++ / Blueprint / Motion Matching / Pose Search / Chooser / Motion Warping / Enhanced Input |
+| 개발 기간 | 2026.05.10 ~ 2026.06.14 |
 
 ## 플레이 영상
 
 추가 예정
+
+## 목차
+
+- [개발 목적과 담당 범위](#개발-목적과-담당-범위)
+- [핵심 기술](#핵심-기술)
+  - [1. Motion Matching 구성과 Pose Search Schema 조정](#1-motion-matching-구성과-pose-search-schema-조정)
+  - [2. Box 기반 파쿠르 판정과 Motion Warping](#2-box-기반-파쿠르-판정과-motion-warping)
+    - [2-1. 장애물의 기준점을 Box로 계산](#2-1-장애물의-기준점을-box로-계산)
+    - [2-2. 파쿠르 진입 포즈 검색을 몽타주 시작점 처리로 변경](#2-2-파쿠르-진입-포즈-검색을-몽타주-시작점-처리로-변경)
+    - [2-3. 동작 구간에 맞춘 Warp Target과 Notify 조정](#2-3-동작-구간에-맞춘-warp-target과-notify-조정)
+  - [3. 매달리기와 난간 이동 확장](#3-매달리기와-난간-이동-확장)
+    - [3-1. 난간 잡기와 좌우 이동](#3-1-난간-잡기와-좌우-이동)
+    - [3-2. 올라갈 공간이 없는 곳에서의 등반 방지](#3-2-올라갈-공간이-없는-곳에서의-등반-방지)
+    - [3-3. 매달리기 상태와 일반 이동 연결](#3-3-매달리기-상태와-일반-이동-연결)
+- [추가 구현](#추가-구현)
+  - [체크포인트와 리스폰](#체크포인트와-리스폰)
+  - [게임 모드와 결과 UI](#게임-모드와-결과-ui)
 
 ## 개발 목적과 담당 범위
 
